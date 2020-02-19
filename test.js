@@ -2,7 +2,11 @@ const assert = require('assert');
 
 const toReadable = require('./src');
 
+it('Should return \'twenty three million four hundred twenty three thousand four hundred forty five\' when 23423445 given', () => {
+  const readable = toReadable(23423445);
 
+  assert.equal(readable, 'twenty three million four hundred twenty three thousand four hundred forty five');
+});
 it('Should return \'zero\' when 0 given', () => {
   const readable = toReadable(0);
 
